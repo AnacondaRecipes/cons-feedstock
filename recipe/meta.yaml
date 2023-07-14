@@ -17,6 +17,7 @@ requirements:
     - pip
     - python
     - setuptools
+    - wheel
   run:
     - python
     - logical-unification >=0.4.1
@@ -24,17 +25,22 @@ requirements:
 test:
   imports:
     - cons
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: https://github.com/pythological/python-cons
   license: LGPL-3.0-only
-  license_familyy: LGPL
+  license_family: LGPL
   license_file: LICENSE.txt
   summary: An implementation of Lisp/Scheme-like cons in Python.
   description: |
     The cons package attempts to emulate the semantics of Lisp/Scheme's cons as closely as possible while
     incorporating all the built-in Python sequence types.
   dev_url: https://github.com/pythological/python-cons
+  doc_url: https://github.com/pythological/python-cons
 
 extra:
   recipe-maintainers:
